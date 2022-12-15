@@ -9,7 +9,7 @@ module.exports = {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
       accounts: {
-        mnemonic: "average sunset brick render holiday purpose another despair almost ignore decide ask",
+        mnemonic: process.env.MNEMONIC,
       },
     },
   },

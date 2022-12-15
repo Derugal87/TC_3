@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/aderugo/Desktop/TC_3/contracts/StakingContract.sol": {
-      "lastModificationDate": 1670979063000,
-      "contentHash": "10e2ec20376d0247e56c7275fa50f523",
-      "sourceName": "contracts/StakingContract.sol",
+    "/Users/aderugo/Desktop/TCC_3/contracts/MyToken.sol": {
+      "lastModificationDate": 1671072400000,
+      "contentHash": "8e200cde74cbb4dc97aaddb54d3026d7",
+      "sourceName": "contracts/MyToken.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -29,16 +29,52 @@
         }
       },
       "imports": [
+        "hardhat/console.sol",
         "@openzeppelin/contracts/token/ERC20/ERC20.sol"
       ],
       "versionPragmas": [
         "^0.8.9"
       ],
       "artifacts": [
-        "StakingContract"
+        "MyToken"
       ]
     },
-    "/Users/aderugo/Desktop/TC_3/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+    "/Users/aderugo/Desktop/TCC_3/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1670942723000,
+      "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/Users/aderugo/Desktop/TCC_3/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1670964871000,
       "contentHash": "834a0dde221759af42b030253315b086",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
@@ -77,7 +113,7 @@
         "ERC20"
       ]
     },
-    "/Users/aderugo/Desktop/TC_3/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+    "/Users/aderugo/Desktop/TCC_3/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1670964871000,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
@@ -112,7 +148,7 @@
         "Context"
       ]
     },
-    "/Users/aderugo/Desktop/TC_3/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+    "/Users/aderugo/Desktop/TCC_3/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1670964871000,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
@@ -147,7 +183,7 @@
         "IERC20"
       ]
     },
-    "/Users/aderugo/Desktop/TC_3/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+    "/Users/aderugo/Desktop/TCC_3/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1670964871000,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
@@ -182,6 +218,43 @@
       ],
       "artifacts": [
         "IERC20Metadata"
+      ]
+    },
+    "/Users/aderugo/Desktop/TCC_3/contracts/Stake.sol": {
+      "lastModificationDate": 1671072147000,
+      "contentHash": "a19d1826df38235406f2228535ff11d0",
+      "sourceName": "contracts/Stake.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MyToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Stake"
       ]
     }
   }

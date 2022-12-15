@@ -1,13 +1,17 @@
 const hre = require("hardhat");
 
 async function main() {
-  const StakingContract = await hre.ethers.getContractFactory("StakingContract");
-  const stakingContract = await StakingContract.deploy();
-  await stakingContract.deployed();
+  const MyToken = await hre.ethers.getContractFactory("MyToken");
+  const myToken = await MyToken.deploy();
+  await myToken.deployed();
+  console.log("MyToken contract: ", myToken.address);
 
-  console.log("My Token", stakingContract.address);
-
+  const Stake = await hre.ethers.getContractFactory("Stake");
+  const stake = await Stake.deploy(myToken.address);
+  await stake.deployed();
+  console.log("Stake contract: ", stake.address);
 }
+
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
