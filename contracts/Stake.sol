@@ -12,7 +12,6 @@ contract Stake is MyToken
 	struct staker_info
 	{ 
         	uint deposit; 
-        	uint withdraw; 
         	uint timeStamp; 
     	}
 
@@ -36,7 +35,7 @@ contract Stake is MyToken
         	require(_deposit > 0, "Stake must be greater than 0");
         	require(token.balanceOf(msg.sender) >= _deposit, "Insufficient funds to deposit stake");
 		token.transferFrom(msg.sender, address(this), _deposit);
-		staker_data[msg.sender] = staker_info({ deposit: _deposit, withdraw: 0, timeStamp: block.timestamp + 60 });
+		staker_data[msg.sender] = staker_info({ deposit: _deposit, timeStamp: block.timestamp + 60 });
 		staker_status[msg.sender] = true;
     	}
 
@@ -47,7 +46,7 @@ contract Stake is MyToken
         	require(_deposit > 0, "Stake must be greater than 0");
         	require(staker_data[msg.sender].deposit >= _deposit, "Insufficient funds to withdraw stake");
 		token.transfer(msg.sender, _deposit + calculateProfit(_deposit));
-		staker_data[msg.sender] = staker_info({ deposit: 0, withdraw: 0, timeStamp: 0 });
+		staker_data[msg.sender] = staker_info({ deposit: 0, timeStamp: 0 });
 		staker_status[msg.sender] = false;
    	}
 }
